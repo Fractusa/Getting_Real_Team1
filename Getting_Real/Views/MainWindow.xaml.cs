@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Getting_Real.ViewModels;
 
 namespace Getting_Real
 {
@@ -20,5 +21,6 @@ namespace Getting_Real
         {
             InitializeComponent();
         }
+       
     }
 }
