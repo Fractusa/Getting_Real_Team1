@@ -17,10 +17,15 @@ namespace Getting_Real.Models
         public bool ParkingSpotFree
         { get; set; }
 
-        public ParkingSpot(int ParkingSpotId, bool parkingSpotFree)
+        public ParkingSpot(int parkingSpotId, bool parkingSpotFree)
+        {
+            this.ParkingSpotId = parkingSpotId;
+            this.ParkingSpotFree = parkingSpotFree;
+        }
+
+        public ParkingSpot()
         {
 
         }
-
     }
 }

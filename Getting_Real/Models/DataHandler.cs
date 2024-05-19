@@ -8,7 +8,7 @@ namespace Getting_Real.Models
 {
     public class DataHandler
     {
-        private List<ParkingSpot> parkingSpots = new();
+        public List<ParkingSpot> parkingSpots = new();
         private List<Vehicle> vehicles = new();     
         private DateOnly currentTime = DateOnly.FromDateTime(DateTime.Now);
         private Vehicle vehicle;
@@ -23,58 +23,75 @@ namespace Getting_Real.Models
             }
         }
 
-        public void AddVehicle(string ownerName, int ownerBookingNumber, string numberPlate, ParkingSpot parkingSpotId, 
+        public List<Vehicle> Vehicles()
+        { return vehicles; }
+
+        public string ConvertTypeToString<T>(T typeToConvert)
+        {
+            string strConversion;
+
+            //if (typeToConvert is ParkingSpot parking)
+            //{
+            //    strConversion = $"{parking.ParkingSpotId},{parking.ParkingSpotFree}";
+            //}
+            if (typeToConvert is Vehicle vehicle)
+            {
+                //vehicle.ParkingSpotId = parkingSpot;
+
+                strConversion = $"{vehicle.OwnerName},{vehicle.OwnerBookingNumber},{vehicle.NumberPlate},{vehicle.ParkingSpotId}," +
+                                                                                   $"{vehicle.ArrivalDate},{vehicle.DepartureTime}";
+            }
+            else
+            {
+                return strConversion = "Conversion failed";
+            }
+
+            return strConversion;
+        }
+
+        public void AddVehicle(string ownerName, int ownerBookingNumber, string numberPlate, int parkingSpotId, 
                                                                             DateOnly arrivalDate, DateOnly departureDate)
         {
-            ParkingSpot selectedParkingSpot = parkingSpots[0];
+            int selectedParkingSpot = 0;
 
             foreach (ParkingSpot parkingSpot in parkingSpots)
             {
                 if (parkingSpot.ParkingSpotFree)
                 {
-                    selectedParkingSpot = parkingSpot;
+                    selectedParkingSpot = parkingSpotId;
                     parkingSpot.ParkingSpotFree = false;
                     break;
                 }
-                else
-                {
-                    throw (new ArgumentException("No free parkingspots"));
-                }
-            }
+                //else
+                //{
+                //    throw (new ArgumentException("No free parkingspots"));
+                //}
+            }            
 
             Vehicle currentVehicle = new Vehicle(ownerName, ownerBookingNumber, numberPlate, selectedParkingSpot, arrivalDate, departureDate);
 
             vehicles.Add(currentVehicle);
         }
 
-    
         private void UpdateVehicles()
         {
-            foreach(Vehicle vehicle in vehicles)
+            foreach (Vehicle vehicle in vehicles)
             {
                 if (vehicle.DepartureTime <= currentTime)
                 {
-                    vehicles.Remove(vehicle);
-                    ParkingSpot currentParkingSpotId = vehicle.ParkingSpotId;
 
-                    foreach(ParkingSpot parkingSpot in parkingSpots)
+                    int currentParkingSpotId = vehicle.ParkingSpotId;
+                    vehicles.Remove(vehicle);
+
+                    foreach (ParkingSpot parkingSpot in parkingSpots)
                     {
-                        if(currentParkingSpotId == parkingSpot)
+                        if (currentParkingSpotId == parkingSpot.ParkingSpotId)
                         {
                             parkingSpot.ParkingSpotFree = true;
                         }
-
-
                     }
                 }
-
-
             }
-        }
-
-        //public Vehicle GetVehicle(ParkingSpot parkingSpodId)
-        //    {
-        //         foreach ()
-        //    }
+        }    
     }
 }

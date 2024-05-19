@@ -8,21 +8,21 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid Margin="0,0,84,-6">
         <Label x:Name="lblParkings" Content="Parkeringspladser" HorizontalAlignment="Left" Margin="79,22,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnAddParking" Content="Tilføj Parkering" HorizontalAlignment="Left" Margin="445,388,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnDeleteParking" Content="Slet Parkering" HorizontalAlignment="Left" Margin="354,388,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.869,1.856"/>
-        <Label x:Name="lblOwner" Content="Fulde navn:" HorizontalAlignment="Left" Margin="264,55,0,0" VerticalAlignment="Top" Height="32" Width="81"/>
-        <Label x:Name="lblBooking" Content="Bookingnr:" HorizontalAlignment="Left" Margin="264,111,0,0" VerticalAlignment="Top" Height="33" Width="77"/>
-        <Label x:Name="lblDeparture" Content="Afrejse:" HorizontalAlignment="Left" Margin="264,280,0,0" VerticalAlignment="Top" Height="32" Width="56"/>
-        <Label x:Name="lblNumberPlate" Content="Nummerplade:" HorizontalAlignment="Left" Margin="264,167,0,0" VerticalAlignment="Top" Height="33" Width="102"/>
-        <Label x:Name="lblArrival" Content="Ankomst:" HorizontalAlignment="Left" Margin="264,224,0,0" VerticalAlignment="Top" Height="32" Width="68"/>
-        <Label x:Name="lblParkingSpot" Content="Parkeringsplads:" HorizontalAlignment="Left" Margin="264,336,0,0" VerticalAlignment="Top" Height="33" Width="110"/>
-        <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="390,60,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="138" Height="22"/>
-        <TextBox x:Name="txtBooking" HorizontalAlignment="Left" Margin="390,116,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="138" Height="23"/>
-        <TextBox x:Name="txtNumberPlate" HorizontalAlignment="Left" Margin="390,172,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="138" Height="23"/>
-        <TextBox x:Name="txtArrival" HorizontalAlignment="Left" Margin="390,229,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="138" Height="22"/>
-        <TextBox x:Name="txtDeparture" HorizontalAlignment="Left" Margin="390,285,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="138" Height="22"/>
-        <TextBox x:Name="txtParkingSpot" HorizontalAlignment="Left" Margin="390,341,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="138" Height="23"/>
-        <Button x:Name="btnUpdateList" Content="Opdater Liste" HorizontalAlignment="Left" Margin="264,388,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnAddParking" Content="Tilføj Parkering" HorizontalAlignment="Left" Margin="445,368,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnDeleteParking" Content="Slet Parkering" HorizontalAlignment="Left" Margin="352,368,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.869,1.856"/>
+        <Label x:Name="lblOwner" Content="Fulde navn:" HorizontalAlignment="Left" Margin="262,42,0,0" VerticalAlignment="Top" Height="32" Width="81"/>
+        <Label x:Name="lblBooking" Content="Bookingnr:" HorizontalAlignment="Left" Margin="264,98,0,0" VerticalAlignment="Top" Height="33" Width="77"/>
+        <Label x:Name="lblDeparture" Content="Afrejse:" HorizontalAlignment="Left" Margin="264,267,0,0" VerticalAlignment="Top" Height="32" Width="56"/>
+        <Label x:Name="lblNumberPlate" Content="Nummerplade:" HorizontalAlignment="Left" Margin="262,154,0,0" VerticalAlignment="Top" Height="33" Width="102"/>
+        <Label x:Name="lblArrival" Content="Ankomst:" HorizontalAlignment="Left" Margin="264,211,0,0" VerticalAlignment="Top" Height="32" Width="68"/>
+        <Label x:Name="lblParkingSpot" Content="Parkeringsplads:" HorizontalAlignment="Left" Margin="264,323,0,0" VerticalAlignment="Top" Height="33" Width="110"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="390,47,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="138" Height="22"/>
+        <TextBox x:Name="txtBooking" HorizontalAlignment="Left" Margin="390,103,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="138" Height="23"/>
+        <TextBox x:Name="txtNumberPlate" HorizontalAlignment="Left" Margin="390,159,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="138" Height="23"/>
+        <TextBox x:Name="txtArrival" HorizontalAlignment="Left" Margin="390,216,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="138" Height="22"/>
+        <TextBox x:Name="txtDeparture" HorizontalAlignment="Left" Margin="390,272,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="138" Height="22"/>
+        <TextBox x:Name="txtParkingSpot" HorizontalAlignment="Left" Margin="390,328,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="138" Height="23" RenderTransformOrigin="0.49,-0.132"/>
+        <Button x:Name="btnUpdateList" Content="Opdater Liste" HorizontalAlignment="Left" Margin="262,368,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

@@ -25,8 +25,8 @@ namespace Getting_Real.Models
         public string NumberPlate
         { get; set; }
 
-        public ParkingSpot ParkingSpotId
-        { get; set; }
+        public int ParkingSpotId
+        { get; set; } 
 
         public DateOnly ArrivalDate
         { get; set; }
@@ -34,13 +34,14 @@ namespace Getting_Real.Models
         public DateOnly DepartureTime
         { get; set; }
 
-        public Vehicle(string OwnerName, int OwnerBookingNumber, string NumberPlate, ParkingSpot parkingSpotId, DateOnly ArrivalDate, DateOnly DepartureTime)
+        public Vehicle(string ownerName, int ownerBookingNumber, string numberPlate, int parkingSpotId, DateOnly arrivalDate, DateOnly departureTime)
         {
-            this.OwnerName = OwnerName;
-            this.OwnerBookingNumber = OwnerBookingNumber;
-            this.NumberPlate = NumberPlate;
-            this.ArrivalDate = ArrivalDate;
-            this.departureDate = DepartureTime;
+            this.OwnerName = ownerName;
+            this.OwnerBookingNumber = ownerBookingNumber;
+            this.NumberPlate = numberPlate;
+            this.ParkingSpotId = parkingSpotId;
+            this.ArrivalDate = arrivalDate;
+            this.departureDate = departureTime;
         }
     }
 }
