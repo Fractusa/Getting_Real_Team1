@@ -1,3 +1,6 @@
-Bob,123,Hej123,1,31-12-9999,01-01-0001
-Bo13b,1663,Hej12223,2,31-12-9999,01-01-0001
-Bob,14443,Hej11523,3,31-12-9999,01-01-0001
+test,1,test,0,05-10-1992,01-01-0001
+Skriv navn,0,Skriv nummerplade,0,01-01-2001,01-01-0001
+2,1,Skriv nummerplade,2,01-01-2001,01-01-0001
+Skriv navn,0,Skriv nummerplade,0,01-01-2001,01-01-0001
+Skriv navn,0,Skriv nummerplade,0,01-01-2001,01-01-0001
+test,1,test,0,05-10-1992,01-01-0001

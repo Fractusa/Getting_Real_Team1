@@ -31,17 +31,22 @@ namespace Getting_Real.Models
         public DateOnly ArrivalDate
         { get; set; }
 
-        public DateOnly DepartureTime
+        public DateOnly DepartureDate
         { get; set; }
 
-        public Vehicle(string ownerName, int ownerBookingNumber, string numberPlate, int parkingSpotId, DateOnly arrivalDate, DateOnly departureTime)
+        public Vehicle(string ownerName, int ownerBookingNumber, string numberPlate, int parkingSpotId, DateOnly arrivalDate, DateOnly departureDate)
         {
             this.OwnerName = ownerName;
             this.OwnerBookingNumber = ownerBookingNumber;
             this.NumberPlate = numberPlate;
             this.ParkingSpotId = parkingSpotId;
             this.ArrivalDate = arrivalDate;
-            this.departureDate = departureTime;
+            this.departureDate = departureDate;
+        }
+
+        public Vehicle()
+        {
+
         }
     }
 }

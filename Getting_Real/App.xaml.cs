@@ -9,6 +9,7 @@ namespace Getting_Real
     /// </summary>
     public partial class App : Application
     {
+
     }
 
 }

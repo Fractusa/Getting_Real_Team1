@@ -8,9 +8,10 @@ namespace Getting_Real.Models
 {
     public class DataHandler
     {
+        private FileManager fileManager = new();
         public List<ParkingSpot> parkingSpots = new();
         private List<Vehicle> vehicles = new();     
-        private DateOnly currentTime = DateOnly.FromDateTime(DateTime.Now);
+        private DateOnly currentDate = DateOnly.FromDateTime(DateTime.Now);
         private Vehicle vehicle;
         private ParkingSpot parkingSpot;
         private int numberOfParkingSpots = 8;
@@ -39,7 +40,7 @@ namespace Getting_Real.Models
                 //vehicle.ParkingSpotId = parkingSpot;
 
                 strConversion = $"{vehicle.OwnerName},{vehicle.OwnerBookingNumber},{vehicle.NumberPlate},{vehicle.ParkingSpotId}," +
-                                                                                   $"{vehicle.ArrivalDate},{vehicle.DepartureTime}";
+                                                                                   $"{vehicle.ArrivalDate},{vehicle.DepartureDate}";
             }
             else
             {
@@ -73,11 +74,16 @@ namespace Getting_Real.Models
             vehicles.Add(currentVehicle);
         }
 
+        public List<Vehicle> GetVehicles()
+        {
+            return vehicles;
+        }
+
         private void UpdateVehicles()
         {
             foreach (Vehicle vehicle in vehicles)
             {
-                if (vehicle.DepartureTime <= currentTime)
+                if (vehicle.DepartureDate <= currentDate)
                 {
 
                     int currentParkingSpotId = vehicle.ParkingSpotId;
@@ -92,6 +98,10 @@ namespace Getting_Real.Models
                     }
                 }
             }
-        }    
+        }
+        public void LoadList()
+        {
+            vehicles = fileManager.ReadFromFile2("test.txt");
+        }        
     }
 }

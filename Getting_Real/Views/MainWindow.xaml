@@ -5,24 +5,42 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Getting_Real"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid Margin="0,0,84,-6">
-        <Label x:Name="lblParkings" Content="Parkeringspladser" HorizontalAlignment="Left" Margin="79,22,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnAddParking" Content="Tilføj Parkering" HorizontalAlignment="Left" Margin="445,368,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnDeleteParking" Content="Slet Parkering" HorizontalAlignment="Left" Margin="352,368,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.869,1.856"/>
-        <Label x:Name="lblOwner" Content="Fulde navn:" HorizontalAlignment="Left" Margin="262,42,0,0" VerticalAlignment="Top" Height="32" Width="81"/>
-        <Label x:Name="lblBooking" Content="Bookingnr:" HorizontalAlignment="Left" Margin="264,98,0,0" VerticalAlignment="Top" Height="33" Width="77"/>
-        <Label x:Name="lblDeparture" Content="Afrejse:" HorizontalAlignment="Left" Margin="264,267,0,0" VerticalAlignment="Top" Height="32" Width="56"/>
-        <Label x:Name="lblNumberPlate" Content="Nummerplade:" HorizontalAlignment="Left" Margin="262,154,0,0" VerticalAlignment="Top" Height="33" Width="102"/>
-        <Label x:Name="lblArrival" Content="Ankomst:" HorizontalAlignment="Left" Margin="264,211,0,0" VerticalAlignment="Top" Height="32" Width="68"/>
-        <Label x:Name="lblParkingSpot" Content="Parkeringsplads:" HorizontalAlignment="Left" Margin="264,323,0,0" VerticalAlignment="Top" Height="33" Width="110"/>
-        <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="390,47,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="138" Height="22"/>
-        <TextBox x:Name="txtBooking" HorizontalAlignment="Left" Margin="390,103,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="138" Height="23"/>
-        <TextBox x:Name="txtNumberPlate" HorizontalAlignment="Left" Margin="390,159,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="138" Height="23"/>
-        <TextBox x:Name="txtArrival" HorizontalAlignment="Left" Margin="390,216,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="138" Height="22"/>
-        <TextBox x:Name="txtDeparture" HorizontalAlignment="Left" Margin="390,272,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="138" Height="22"/>
-        <TextBox x:Name="txtParkingSpot" HorizontalAlignment="Left" Margin="390,328,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="138" Height="23" RenderTransformOrigin="0.49,-0.132"/>
-        <Button x:Name="btnUpdateList" Content="Opdater Liste" HorizontalAlignment="Left" Margin="262,368,0,0" VerticalAlignment="Top"/>
+        Title="MainWindow" Height="450" Width="800"
+        Closing="Window_Closing"
+                                >
 
+    <Grid Margin="0,0,84,-6">
+        <Label x:Name="lblParkings" Content="Parkeringspladser" HorizontalAlignment="Left" Margin="153,22,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnAddParking" Content="Tilføj Parkering" HorizontalAlignment="Left" Margin="617,368,0,0" VerticalAlignment="Top" Click="btnAddParking_Click"/>
+        <Button x:Name="btnDeleteParking" Content="Slet Parkering" HorizontalAlignment="Left" Margin="524,368,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.869,1.856" Click="btnDeleteParking_Click"/>
+        <Label x:Name="lblOwner" Content="Fulde navn:" HorizontalAlignment="Left" Margin="434,42,0,0" VerticalAlignment="Top" Height="32" Width="81"/>
+        <Label x:Name="lblBooking" Content="Bookingnr:" HorizontalAlignment="Left" Margin="434,98,0,0" VerticalAlignment="Top" Height="33" Width="77"/>
+        <Label x:Name="lblDeparture" Content="Afrejse:" HorizontalAlignment="Left" Margin="436,267,0,0" VerticalAlignment="Top" Height="32" Width="56"/>
+        <Label x:Name="lblNumberPlate" Content="Nummerplade:" HorizontalAlignment="Left" Margin="434,154,0,0" VerticalAlignment="Top" Height="33" Width="102"/>
+        <Label x:Name="lblArrival" Content="Ankomst:" HorizontalAlignment="Left" Margin="436,211,0,0" VerticalAlignment="Top" Height="32" Width="68"/>
+        <Label x:Name="lblParkingSpot" Content="Parkeringsplads:" HorizontalAlignment="Left" Margin="436,323,0,0" VerticalAlignment="Top" Height="33" Width="110"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="562,47,0,0" TextWrapping="Wrap" Text="{Binding SelectedVehicle.OwnerName, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="138" Height="22"/>
+        <TextBox x:Name="txtBooking" HorizontalAlignment="Left" Margin="562,103,0,0" TextWrapping="Wrap" Text="{Binding SelectedVehicle.OwnerBookingNumber, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="138" Height="23"/>
+        <TextBox x:Name="txtNumberPlate" HorizontalAlignment="Left" Margin="562,159,0,0" TextWrapping="Wrap" Text="{Binding SelectedVehicle.NumberPlate, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="138" Height="23"/>
+        <TextBox x:Name="txtArrival" HorizontalAlignment="Left" Margin="562,216,0,0" TextWrapping="Wrap" Text="{Binding SelectedVehicle.ArrivalDate, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="138" Height="22"/>
+        <TextBox x:Name="txtDeparture" HorizontalAlignment="Left" Margin="562,272,0,0" TextWrapping="Wrap" Text="{Binding SelectedVehicle.DepartureDate, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="138" Height="22"/>
+        <TextBox x:Name="txtParkingSpot" HorizontalAlignment="Left" Margin="562,328,0,0" TextWrapping="Wrap" Text="{Binding SelectedVehicle.ParkingSpotId, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="138" Height="23" RenderTransformOrigin="0.49,-0.132"/>
+        <Button x:Name="btnUpdateList" Content="Opdater Liste" HorizontalAlignment="Left" Margin="434,368,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="listBox" ItemsSource="{Binding VehiclesVM}" SelectedItem="{Binding SelectedVehicle, Mode=TwoWay}" Margin="25,48,307,52">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="{Binding OwnerName}"/>
+                        <Label Content="{Binding OwnerBookingNumber}"/>
+                        <Label Content="{Binding NumberPlate}"/>
+                        <Label Content="{Binding ArrivalDate}"/>
+                        <Label Content="{Binding DepartureDate}"/>
+                        <Label Content="{Binding ParkingSpotId}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <StackPanel Orientation="Horizontal" Margin="0,0,358,21"/>
     </Grid>
+
 </Window>

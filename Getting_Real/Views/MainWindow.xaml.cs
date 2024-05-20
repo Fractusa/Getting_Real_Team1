@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.ComponentModel;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -8,8 +9,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Getting_Real.ViewModels;
 using Getting_Real.Models;
+using Getting_Real.ViewModels;
 
 namespace Getting_Real
 {
@@ -18,20 +19,30 @@ namespace Getting_Real
     /// </summary>
     public partial class MainWindow : Window
     {
-        DataHandler handler = new();
-        FileManager file = new();
+        MainViewModel mvm = new();
 
         public MainWindow()
-        {
-            
-            handler.CreateParkingSpots();
-            handler.AddVehicle("Bob", 123, "Hej123", handler.parkingSpots[0].ParkingSpotId, DateOnly.MaxValue, DateOnly.MinValue);
-            handler.AddVehicle("Bo13b", 1663, "Hej12223", handler.parkingSpots[1].ParkingSpotId, DateOnly.MaxValue, DateOnly.MinValue);
-            handler.AddVehicle("Bob", 14443, "Hej11523", handler.parkingSpots[2].ParkingSpotId, DateOnly.MaxValue, DateOnly.MinValue);
-            file.WriteToFile("test.txt", handler.Vehicles());
-            
-            InitializeComponent();
+        {           
+            mvm.handler.CreateParkingSpots();
+            DataContext = mvm;
 
-        }      
+            InitializeComponent();
+        }
+
+        private void btnAddParking_Click(object sender, RoutedEventArgs e)
+        {
+            mvm.AddNewVehicle();
+        }
+
+        private void Window_Closing(object sender, CancelEventArgs e)
+        {
+            List<Vehicle> listConversion = mvm.VehiclesVM.ToList();
+            mvm.fileManager.WriteToFile("test.txt", listConversion);
+        }
+
+        private void btnDeleteParking_Click(object sender, RoutedEventArgs e)
+        {
+            mvm.DeleteSelectedVehicle();
+        }
     }
 }
