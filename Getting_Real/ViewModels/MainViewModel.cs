@@ -53,6 +53,7 @@ namespace Getting_Real.ViewModels
 
             handler.AddVehicle("Skriv navn", 0000, "Skriv nummerplade", 0, new DateOnly(2001, 1, 1), new DateOnly(2001, 1, 1));
             VehiclesVM.Add(newVehicle);
+            handler.vehicles.Add(newVehicle);
 
             SelectedVehicle = newVehicle;
         }
@@ -62,6 +63,7 @@ namespace Getting_Real.ViewModels
             if (SelectedVehicle != null)
             {
                 VehiclesVM.Remove(SelectedVehicle);
+                handler.vehicles.Remove(SelectedVehicle);
                 SelectedVehicle = null;
             }
         }
@@ -76,9 +78,34 @@ namespace Getting_Real.ViewModels
             }
         }
 
-    //    public void updatevehiclelist()
-    //    {
-    //        handler.updatelist(tolist(vehiclesvm));
-    //    }
+        public void UpdateVMList(List<Vehicle> vehicleToRemove)
+        {
+            List<Vehicle> vehicleVMToRemove = new();
+            foreach (Vehicle vehicle in vehicleToRemove)
+            {
+                foreach(Vehicle vehicleVM in VehiclesVM)
+                    if(vehicle == vehicleVM)
+                    {
+                        vehicleVMToRemove.Add(vehicleVM);
+                    }
+            }
+            foreach (Vehicle vehicle in vehicleVMToRemove)
+            {
+                int j = 0;
+                if (vehicle == VehiclesVM[j])
+                {
+                    VehiclesVM.Remove(vehicle);
+                    if (j != 0) j--;
+                }
+
+                else if (VehiclesVM.Count == 0)
+                {
+                    break;
+                }
+
+                j++;
+
+            }
+        }
     }
 }

@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "G:\\Program Files\\School Git Files\\Getting_Real_Team1\\Getting_Real\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E58685B2-7982-43D9-9311-27F0CFB1B5B7}|Getting_Real.csproj|g:\\program files\\school git files\\getting_real_team1\\getting_real\\models\\filemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E58685B2-7982-43D9-9311-27F0CFB1B5B7}|Getting_Real.csproj|solutionrelative:models\\filemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E58685B2-7982-43D9-9311-27F0CFB1B5B7}|Getting_Real.csproj|g:\\program files\\school git files\\getting_real_team1\\getting_real\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{E58685B2-7982-43D9-9311-27F0CFB1B5B7}|Getting_Real.csproj|solutionrelative:views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -15,12 +11,16 @@
       "RelativeMoniker": "D:0:0:{E58685B2-7982-43D9-9311-27F0CFB1B5B7}|Getting_Real.csproj|solutionrelative:viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E58685B2-7982-43D9-9311-27F0CFB1B5B7}|Getting_Real.csproj|g:\\program files\\school git files\\getting_real_team1\\getting_real\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E58685B2-7982-43D9-9311-27F0CFB1B5B7}|Getting_Real.csproj|solutionrelative:views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E58685B2-7982-43D9-9311-27F0CFB1B5B7}|Getting_Real.csproj|g:\\program files\\school git files\\getting_real_team1\\getting_real\\models\\datahandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E58685B2-7982-43D9-9311-27F0CFB1B5B7}|Getting_Real.csproj|solutionrelative:models\\datahandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E58685B2-7982-43D9-9311-27F0CFB1B5B7}|Getting_Real.csproj|g:\\program files\\school git files\\getting_real_team1\\getting_real\\models\\filemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E58685B2-7982-43D9-9311-27F0CFB1B5B7}|Getting_Real.csproj|solutionrelative:models\\filemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E58685B2-7982-43D9-9311-27F0CFB1B5B7}|Getting_Real.csproj|g:\\program files\\school git files\\getting_real_team1\\getting_real\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E58685B2-7982-43D9-9311-27F0CFB1B5B7}|Getting_Real.csproj|solutionrelative:views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E58685B2-7982-43D9-9311-27F0CFB1B5B7}|Getting_Real.csproj|g:\\program files\\school git files\\getting_real_team1\\getting_real\\models\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,14 +46,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "DataHandler.cs",
               "DocumentMoniker": "G:\\Program Files\\School Git Files\\Getting_Real_Team1\\Getting_Real\\Models\\DataHandler.cs",
               "RelativeDocumentMoniker": "Models\\DataHandler.cs",
               "ToolTip": "G:\\Program Files\\School Git Files\\Getting_Real_Team1\\Getting_Real\\Models\\DataHandler.cs",
               "RelativeToolTip": "Models\\DataHandler.cs",
-              "ViewState": "AQIAAEoAAAAAAAAAAAAIwGcAAAAwAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFgAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "OverriddenGroupName": "Models",
               "WhenOpened": "2024-05-17T15:32:37.69Z",
               "EditorCaption": ""
             },
@@ -85,7 +86,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "G:\\Program Files\\School Git Files\\Getting_Real_Team1\\Getting_Real\\Views\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Views\\MainWindow.xaml",
@@ -98,7 +99,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "FileManager.cs",
               "DocumentMoniker": "G:\\Program Files\\School Git Files\\Getting_Real_Team1\\Getting_Real\\Models\\FileManager.cs",
               "RelativeDocumentMoniker": "Models\\FileManager.cs",
@@ -111,13 +112,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "MainViewModel.cs",
               "DocumentMoniker": "G:\\Program Files\\School Git Files\\Getting_Real_Team1\\Getting_Real\\ViewModels\\MainViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\MainViewModel.cs",
               "ToolTip": "G:\\Program Files\\School Git Files\\Getting_Real_Team1\\Getting_Real\\ViewModels\\MainViewModel.cs",
               "RelativeToolTip": "ViewModels\\MainViewModel.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABQAAAAOAAAA",
+              "ViewState": "AQIAACEAAAAAAAAAAAAowGMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "OverriddenGroupName": "ViewModels",
               "WhenOpened": "2024-05-17T13:16:04.471Z",
@@ -125,13 +126,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "G:\\Program Files\\School Git Files\\Getting_Real_Team1\\Getting_Real\\Views\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "Views\\MainWindow.xaml.cs",
               "ToolTip": "G:\\Program Files\\School Git Files\\Getting_Real_Team1\\Getting_Real\\Views\\MainWindow.xaml.cs",
               "RelativeToolTip": "Views\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABgAAAAJAAAA",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAwDIAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-16T08:27:29.273Z",
               "EditorCaption": ""

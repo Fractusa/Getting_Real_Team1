@@ -44,5 +44,10 @@ namespace Getting_Real
         {
             mvm.DeleteSelectedVehicle();
         }
+
+        private void btnUpdateList_Click(object sender, RoutedEventArgs e)
+        {
+            mvm.UpdateVMList(mvm.handler.UpdateVehicles());
+        }
     }
 }

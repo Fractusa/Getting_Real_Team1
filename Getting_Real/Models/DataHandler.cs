@@ -10,7 +10,7 @@ namespace Getting_Real.Models
     {
         private FileManager fileManager = new();
         public List<ParkingSpot> parkingSpots = new();
-        private List<Vehicle> vehicles = new();     
+        public List<Vehicle> vehicles = new();     
         private DateOnly currentDate = DateOnly.FromDateTime(DateTime.Now);
         private Vehicle vehicle;
         private ParkingSpot parkingSpot;
@@ -79,15 +79,18 @@ namespace Getting_Real.Models
             return vehicles;
         }
 
-        private void UpdateVehicles()
+        public List<Vehicle> UpdateVehicles()
         {
-            foreach (Vehicle vehicle in vehicles)
-            {
-                if (vehicle.DepartureDate <= currentDate)
-                {
+            List<Vehicle> vehiclesToRemove = new();
+            int listLength = vehicles.Count;
 
+            for(int i = 0; i < listLength; i++)
+            {                
+                Vehicle vehicle = vehicles[i];
+                if (vehicle.DepartureDate.CompareTo(currentDate) <= 0)
+                {
+                    vehiclesToRemove.Add(vehicle);
                     int currentParkingSpotId = vehicle.ParkingSpotId;
-                    vehicles.Remove(vehicle);
 
                     foreach (ParkingSpot parkingSpot in parkingSpots)
                     {
@@ -98,7 +101,23 @@ namespace Getting_Real.Models
                     }
                 }
             }
+            foreach (Vehicle vehicle in vehiclesToRemove)
+            {
+                int j = 0;
+                if(vehicle == vehicles[j])
+                {
+                    vehicles.Remove(vehicle);
+                    if(j < vehicles.Count)j++;
+                    else
+                    {
+                        return vehiclesToRemove;
+                    }
+                }
+            }
+
+            return vehiclesToRemove;
         }
+
         public void LoadList()
         {
             vehicles = fileManager.ReadFromFile2("test.txt");
