@@ -3,5 +3,3 @@ Skriv navn,0,Skriv nummerplade,0,01-01-2001,01-01-2001
 Skriv navn,0,Skriv nummerplade,0,01-01-2001,01-01-2001
 Skriv navn,0,Skriv nummerplade,0,01-01-2001,01-01-2001
 Skriv navn,0,Skriv nummerplade,0,01-01-2001,01-01-2001
-Skriv navn,0,Skriv nummerplade,0,01-01-2001,01-01-2001
-Skriv navn,0,Skriv nummerplade,0,01-01-2001,01-01-2001

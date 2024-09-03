@@ -18,7 +18,6 @@ namespace Getting_Real.ViewModels
         public MainViewModel()
         {
             handler.LoadList();
-            //handler.AddVehicle("test", 1, "test", 1, new DateOnly(1992,5,10), new DateOnly(2001,2,19));
             VehiclesVM = new ObservableCollection<Vehicle>();
             List<Vehicle> vehicles = handler.GetVehicles();
 
@@ -47,8 +46,6 @@ namespace Getting_Real.ViewModels
                 ParkingSpotId = 0,
                 ArrivalDate = new DateOnly(2001,1,1),
                 DepartureDate = new DateOnly(2001, 1, 1)
-                //test = new DateOnly(input)
-                //int input = Convert.ToInt32("2024, 5, 20")
             };
 
             handler.AddVehicle("Skriv navn", 0000, "Skriv nummerplade", 0, new DateOnly(2001, 1, 1), new DateOnly(2001, 1, 1));
